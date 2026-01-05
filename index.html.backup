@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>MD Mujahidul Islam - Portfolio</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+        rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#6d28d9", // Purple primary
+                        secondary: "#10b981", // Emerald accent
+                        "background-light": "#f3f4f6",
+                        "background-dark": "#0f172a",
+                        "surface-dark": "#1e293b",
+                        "surface-light": "#ffffff",
+                        "text-light": "#1f2937",
+                        "text-dark": "#e2e8f0",
+                    },
+                    fontFamily: {
+                        sans: ['Outfit', 'sans-serif'],
+                        display: ['Outfit', 'sans-serif'],
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.5rem",
+                        'xl': '1rem',
+                        '2xl': '1.5rem',
+                    },
+                    backgroundImage: {
+                        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+                    }
+                },
+            },
+        };
+    </script>
+    <style>
+        .glass-panel {
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .hero-glow {
+            position: absolute;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(109, 40, 217, 0.2) 0%, rgba(15, 23, 42, 0) 70%);
+            top: -20%;
+            right: -10%;
+            z-index: 0;
+            pointer-events: none;
+        }
+    </style>
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark font-sans transition-colors duration-300 antialiased overflow-x-hidden">
+    <nav
+        class="fixed w-full z-50 top-0 left-0 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-gray-200 dark:border-gray-800">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a class="text-2xl font-bold tracking-tighter flex items-center gap-2" href="#">
+                <span class="text-primary">MD Mujahidul</span> Islam
+            </a>
+            <div class="hidden md:flex items-center gap-8 text-sm font-medium text-gray-600 dark:text-gray-300">
+                <a class="hover:text-primary transition-colors" href="#home">Home</a>
+                <a class="hover:text-primary transition-colors" href="#about">About</a>
+                <a class="hover:text-primary transition-colors" href="#services">Services</a>
+                <a class="hover:text-primary transition-colors" href="#skills">Skills</a>
+                <a class="hover:text-primary transition-colors" href="#resume">Resume</a>
+                <a class="hover:text-primary transition-colors" href="#projects">Projects</a>
+                <a class="hover:text-primary transition-colors" href="#contact">Contact</a>
+            </div>
+            <div class="flex items-center gap-4">
+                <a class="hidden sm:flex items-center gap-2 bg-secondary/10 text-secondary border border-secondary/20 px-4 py-2 rounded-full text-sm font-semibold hover:bg-secondary hover:text-white transition-all"
+                    href="#">
+                    <i class="fa-brands fa-whatsapp"></i> WhatsApp
+                </a>
+                <button class="md:hidden text-2xl">
+                    <span class="material-symbols-outlined">menu</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+    <section class="relative pt-32 pb-20 overflow-hidden" id="home">
+        <div class="hero-glow"></div>
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
+                <div class="flex-1 text-center lg:text-left">
+                    <div
+                        class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-green-500/10 text-green-500 text-xs font-semibold mb-6 border border-green-500/20">
+                        <span class="relative flex h-2 w-2">
+                            <span
+                                class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                            <span class="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
+                        </span>
+                        Available for freelance work
+                    </div>
+                    <h1 class="text-5xl lg:text-7xl font-bold mb-4 tracking-tight">
+                        <span class="text-primary block mb-2">MD Mujahidul Islam</span>
+                        <span class="text-3xl lg:text-5xl text-gray-800 dark:text-white font-semibold">Web Designer
+                            &amp; Developer</span>
+                    </h1>
+                    <div class="flex flex-wrap justify-center lg:justify-start gap-3 mb-8 text-sm">
+                        <span
+                            class="px-3 py-1 bg-surface-dark/5 dark:bg-surface-dark border border-gray-200 dark:border-gray-700 rounded-full text-gray-600 dark:text-gray-400">Web
+                            Development</span>
+                        <span
+                            class="px-3 py-1 bg-surface-dark/5 dark:bg-surface-dark border border-gray-200 dark:border-gray-700 rounded-full text-gray-600 dark:text-gray-400">Graphic
+                            Design</span>
+                        <span
+                            class="px-3 py-1 bg-surface-dark/5 dark:bg-surface-dark border border-gray-200 dark:border-gray-700 rounded-full text-gray-600 dark:text-gray-400">Digital
+                            Marketing</span>
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-400 mb-8 max-w-xl mx-auto lg:mx-0 leading-relaxed">
+                        Expert in creating stunning digital experiences through E-Commerce solutions, SEO optimization,
+                        and digital marketing strategies. Transforming ideas into powerful, results-driven websites.
+                    </p>
+                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 mb-10">
+                        <a class="px-8 py-3 bg-primary hover:bg-primary/90 text-white rounded-full font-medium transition-transform active:scale-95 flex items-center gap-2"
+                            href="#projects">
+                            View My Work <span class="material-symbols-outlined text-sm">arrow_downward</span>
+                        </a>
+                        <a class="px-8 py-3 bg-transparent border border-gray-300 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-full font-medium transition-colors flex items-center gap-2"
+                            href="#">
+                            <span class="material-symbols-outlined text-sm">download</span> View Resume
+                        </a>
+                    </div>
+                    <div class="flex justify-center lg:justify-start gap-4">
+                        <a class="w-10 h-10 rounded-full bg-gray-100 dark:bg-surface-dark border border-gray-200 dark:border-gray-700 flex items-center justify-center hover:text-primary hover:border-primary transition-all"
+                            href="#">
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+                        <a class="w-10 h-10 rounded-full bg-gray-100 dark:bg-surface-dark border border-gray-200 dark:border-gray-700 flex items-center justify-center hover:text-primary hover:border-primary transition-all"
+                            href="#">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </a>
+                        <a class="w-10 h-10 rounded-full bg-gray-100 dark:bg-surface-dark border border-gray-200 dark:border-gray-700 flex items-center justify-center hover:text-primary hover:border-primary transition-all"
+                            href="#">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a class="w-10 h-10 rounded-full bg-gray-100 dark:bg-surface-dark border border-gray-200 dark:border-gray-700 flex items-center justify-center hover:text-primary hover:border-primary transition-all"
+                            href="#">
+                            <i class="fa-brands fa-dribbble"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="flex-1 relative">
+                    <div
+                        class="relative w-full max-w-md mx-auto aspect-square rounded-3xl overflow-hidden border border-gray-200 dark:border-gray-800 shadow-2xl bg-surface-dark">
+                        <div class="absolute top-0 right-0 w-32 h-32 bg-primary/20 blur-3xl rounded-full"></div>
+                        <div class="absolute bottom-0 left-0 w-32 h-32 bg-secondary/20 blur-3xl rounded-full"></div>
+                        <img alt="MD Mujahidul Islam Portrait"
+                            class="w-full h-full object-cover relative z-10 opacity-90 hover:scale-105 transition-transform duration-700"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDj3WJsnAwe7wwIVIMDmCT-YCgyJQ_orbuXv71_YazG25j5uYPkWi79KmkwUVGsmy9HWc0LmwBzuqqGkEbKWjmV0g-9HctQA0ULyA5oKLLv43tViWVg8TEb26j7BDQjIT5t6shBGKz8-8YotufNPR6z7DCdnPTxRjK-h9lxM_ekzEj0BYnbK0YliC--lLLG2FuB_GsYIls3hyuvw0wFFF8vTY94GLbXeGCefK_-x-B7kdyOMQvrPYMG63en0S1pP_pMzXrefjOoLKYD" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="py-20 bg-white dark:bg-[#0b1121]" id="about">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col lg:flex-row items-start gap-16">
+                <div class="flex-1 w-full order-2 lg:order-1">
+                    <div class="relative max-w-lg mx-auto mb-16">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-tr from-primary to-secondary rounded-full blur-3xl opacity-20">
+                        </div>
+                        <img alt="About Portrait"
+                            class="relative z-10 w-48 h-48 md:w-64 md:h-64 rounded-full object-cover mx-auto border-4 border-white dark:border-background-dark shadow-xl"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBb8IV39Gye9UviKz5AYF3z2do3hwtCVsgKKwtafdbHmti2RCsqyb2RYcuvH3arOmURE2xa7WgzlwhMU7zUeOZ81QB46ETM818ujm1Agtm7oWYnuUnCbvSsDCMPrzRP7jlICczy2eT95ShIkm0aFpRLi_YzVs9mibxLlumLA1x0sShERRwB7fii3zGZwNB_yFv1K8HO-vLasInVZ33NPycJxgeSOWB5CYj0cQP3n_nK78kyJClK_8vaBizcL-ktkEqu3oyrpRVi3WAm" />
+                        <div class="absolute top-0 right-10 z-20 bg-white dark:bg-surface-dark p-3 rounded-xl shadow-lg border border-gray-100 dark:border-gray-700 animate-bounce"
+                            style="animation-duration: 3s;">
+                            <span class="text-primary font-bold text-xl">7+ Years</span>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div
+                            class="glass-panel dark:bg-surface-dark bg-gray-50 p-6 rounded-2xl text-center border border-gray-200 dark:border-gray-700 hover:-translate-y-1 transition-transform">
+                            <div
+                                class="w-12 h-12 mx-auto bg-primary/20 text-primary rounded-full flex items-center justify-center mb-3">
+                                <span class="material-symbols-outlined">rocket_launch</span>
+                            </div>
+                            <h3 class="text-2xl font-bold mb-1">50+</h3>
+                            <p class="text-sm text-gray-500">Projects Completed</p>
+                        </div>
+                        <div
+                            class="glass-panel dark:bg-surface-dark bg-gray-50 p-6 rounded-2xl text-center border border-gray-200 dark:border-gray-700 hover:-translate-y-1 transition-transform">
+                            <div
+                                class="w-12 h-12 mx-auto bg-blue-500/20 text-blue-500 rounded-full flex items-center justify-center mb-3">
+                                <span class="material-symbols-outlined">sentiment_satisfied</span>
+                            </div>
+                            <h3 class="text-2xl font-bold mb-1">30+</h3>
+                            <p class="text-sm text-gray-500">Happy Clients</p>
+                        </div>
+                        <div
+                            class="glass-panel dark:bg-surface-dark bg-gray-50 p-6 rounded-2xl text-center border border-gray-200 dark:border-gray-700 hover:-translate-y-1 transition-transform">
+                            <div
+                                class="w-12 h-12 mx-auto bg-purple-500/20 text-purple-500 rounded-full flex items-center justify-center mb-3">
+                                <span class="material-symbols-outlined">coffee</span>
+                            </div>
+                            <h3 class="text-2xl font-bold mb-1">1000+</h3>
+                            <p class="text-sm text-gray-500">Cups of Coffee</p>
+                        </div>
+                        <div
+                            class="glass-panel dark:bg-surface-dark bg-gray-50 p-6 rounded-2xl text-center border border-gray-200 dark:border-gray-700 hover:-translate-y-1 transition-transform">
+                            <div
+                                class="w-12 h-12 mx-auto bg-pink-500/20 text-pink-500 rounded-full flex items-center justify-center mb-3">
+                                <span class="material-symbols-outlined">favorite</span>
+                            </div>
+                            <h3 class="text-2xl font-bold mb-1">7+</h3>
+                            <p class="text-sm text-gray-500">Years Experience</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex-1 order-1 lg:order-2">
+                    <h2 class="text-3xl lg:text-4xl font-bold mb-6">About Me</h2>
+                    <p class="text-gray-600 dark:text-gray-400 mb-6 leading-relaxed">
+                        I'm MD Mujahidul Islam, a passionate Web Designer &amp; Developer with over 7 years of
+                        experience in creating digital experiences that drive business results. My expertise spans
+                        across E-Commerce development, SEO optimization, digital marketing, and graphic design.
+                    </p>
+                    <p class="text-gray-600 dark:text-gray-400 mb-6 leading-relaxed">
+                        I believe in creating websites that not only look stunning but also convert visitors into
+                        customers. Every project I undertake is designed with user experience, search engine
+                        optimization, and business growth in mind.
+                    </p>
+                    <p class="text-gray-600 dark:text-gray-400 mb-8 leading-relaxed">
+                        When I'm not coding or designing, you can find me exploring the latest web technologies,
+                        studying market trends, or helping businesses establish their digital presence through strategic
+                        marketing initiatives.
+                    </p>
+                    <h3 class="text-lg font-bold mb-4">What I Do</h3>
+                    <div class="flex flex-wrap gap-3">
+                        <span class="px-4 py-2 bg-primary/10 text-primary rounded-lg text-sm font-medium">Web
+                            Design</span>
+                        <span class="px-4 py-2 bg-blue-500/10 text-blue-500 rounded-lg text-sm font-medium">Web
+                            Development</span>
+                        <span
+                            class="px-4 py-2 bg-indigo-500/10 text-indigo-500 rounded-lg text-sm font-medium">E-Commerce
+                            Development</span>
+                        <span class="px-4 py-2 bg-green-500/10 text-green-500 rounded-lg text-sm font-medium">SEO
+                            Optimization</span>
+                        <span class="px-4 py-2 bg-purple-500/10 text-purple-500 rounded-lg text-sm font-medium">Digital
+                            Marketing</span>
+                        <span class="px-4 py-2 bg-pink-500/10 text-pink-500 rounded-lg text-sm font-medium">Mobile App
+                            Development</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="py-20 relative bg-background-light dark:bg-background-dark" id="services">
+        <div class="container mx-auto px-6">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-primary text-sm font-bold uppercase tracking-wider mb-2 block">What I Offer</span>
+                <h2 class="text-3xl lg:text-4xl font-bold mb-4">Services &amp; Expertise</h2>
+                <p class="text-gray-600 dark:text-gray-400 mb-8">
+                    Comprehensive digital solutions to help your business thrive online. From concept to launch, I
+                    deliver exceptional results that exceed expectations.
+                </p>
+                <a class="inline-flex items-center gap-2 px-6 py-2 bg-gradient-to-r from-green-500 to-emerald-600 text-white rounded-full text-sm font-semibold hover:shadow-lg transition-all"
+                    href="#">
+                    <span class="material-symbols-outlined text-sm">code</span> View Technical Skills
+                </a>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div
+                    class="group p-8 rounded-2xl bg-white dark:bg-surface-dark border border-gray-200 dark:border-gray-800 hover:border-primary/50 dark:hover:border-primary/50 transition-all hover:shadow-2xl hover:shadow-primary/5">
+                    <div
+                        class="w-12 h-12 rounded-lg bg-blue-500/10 text-blue-500 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <span class="material-symbols-outlined">code</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Web Development</h3>
+                    <p class="text-gray-500 dark:text-gray-400 text-sm leading-relaxed mb-4">
+                        Custom websites and web applications built with modern technologies and best practices.
+                    </p>
+                    <a class="text-blue-500 text-sm font-medium flex items-center gap-1 group-hover:gap-2 transition-all"
+                        href="#">
+                        Learn more <span class="material-symbols-outlined text-xs">arrow_forward_ios</span>
+                    </a>
+                </div>
+                <div
+                    class="group p-8 rounded-2xl bg-white dark:bg-surface-dark border border-gray-200 dark:border-gray-800 hover:border-green-500/50 dark:hover:border-green-500/50 transition-all hover:shadow-2xl hover:shadow-green-500/5">
+                    <div
+                        class="w-12 h-12 rounded-lg bg-green-500/10 text-green-500 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <span class="material-symbols-outlined">shopping_cart</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">E-Commerce Solutions</h3>
+                    <p class="text-gray-500 dark:text-gray-400 text-sm leading-relaxed mb-4">
+                        Complete online stores with payment integration and inventory management systems.
+                    </p>
+                    <a class="text-green-500 text-sm font-medium flex items-center gap-1 group-hover:gap-2 transition-all"
+                        href="#">
+                        Learn more <span class="material-symbols-outlined text-xs">arrow_forward_ios</span>
+                    </a>
+                </div>
+                <div
+                    class="group p-8 rounded-2xl bg-white dark:bg-surface-dark border border-gray-200 dark:border-gray-800 hover:border-orange-500/50 dark:hover:border-orange-500/50 transition-all hover:shadow-2xl hover:shadow-orange-500/5">
+                    <div
+                        class="w-12 h-12 rounded-lg bg-orange-500/10 text-orange-500 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <span class="material-symbols-outlined">search</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">SEO Optimization</h3>
+                    <p class="text-gray-500 dark:text-gray-400 text-sm leading-relaxed mb-4">
+                        Improve your search rankings and drive organic traffic to your website effectively.
+                    </p>
+                    <a class="text-orange-500 text-sm font-medium flex items-center gap-1 group-hover:gap-2 transition-all"
+                        href="#">
+                        Learn more <span class="material-symbols-outlined text-xs">arrow_forward_ios</span>
+                    </a>
+                </div>
+                <div
+                    class="group p-8 rounded-2xl bg-white dark:bg-surface-dark border border-gray-200 dark:border-gray-800 hover:border-red-500/50 dark:hover:border-red-500/50 transition-all hover:shadow-2xl hover:shadow-red-500/5">
+                    <div
+                        class="w-12 h-12 rounded-lg bg-red-500/10 text-red-500 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <span class="material-symbols-outlined">trending_up</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Digital Marketing</h3>
+                    <p class="text-gray-500 dark:text-gray-400 text-sm leading-relaxed mb-4">
+                        Strategic marketing campaigns to grow your online presence and business reach.
+                    </p>
+                    <a class="text-red-500 text-sm font-medium flex items-center gap-1 group-hover:gap-2 transition-all"
+                        href="#">
+                        Learn more <span class="material-symbols-outlined text-xs">arrow_forward_ios</span>
+                    </a>
+                </div>
+                <div
+                    class="group p-8 rounded-2xl bg-white dark:bg-surface-dark border border-gray-200 dark:border-gray-800 hover:border-purple-500/50 dark:hover:border-purple-500/50 transition-all hover:shadow-2xl hover:shadow-purple-500/5">
+                    <div
+                        class="w-12 h-12 rounded-lg bg-purple-500/10 text-purple-500 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <span class="material-symbols-outlined">palette</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Graphic Design</h3>
+                    <p class="text-gray-500 dark:text-gray-400 text-sm leading-relaxed mb-4">
+                        Creative visual solutions including branding, logos, and marketing materials for businesses.
+                    </p>
+                    <a class="text-purple-500 text-sm font-medium flex items-center gap-1 group-hover:gap-2 transition-all"
+                        href="#">
+                        Learn more <span class="material-symbols-outlined text-xs">arrow_forward_ios</span>
+                    </a>
+                </div>
+                <div
+                    class="group p-8 rounded-2xl bg-white dark:bg-surface-dark border border-gray-200 dark:border-gray-800 hover:border-cyan-500/50 dark:hover:border-cyan-500/50 transition-all hover:shadow-2xl hover:shadow-cyan-500/5">
+                    <div
+                        class="w-12 h-12 rounded-lg bg-cyan-500/10 text-cyan-500 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <span class="material-symbols-outlined">dns</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Server Management</h3>
+                    <p class="text-gray-500 dark:text-gray-400 text-sm leading-relaxed mb-4">
+                        Hosting and server management with dedicated hosting solutions for optimal performance.
+                    </p>
+                    <a class="text-cyan-500 text-sm font-medium flex items-center gap-1 group-hover:gap-2 transition-all"
+                        href="#">
+                        Learn more <span class="material-symbols-outlined text-xs">arrow_forward_ios</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="py-12 bg-white dark:bg-[#0b1121] border-y border-gray-100 dark:border-gray-800">
+        <div class="container mx-auto px-6">
+            <h3 class="text-center text-xl font-bold mb-10 text-gray-400">Achievements &amp; Milestones</h3>
+            <div class="bg-gray-50 dark:bg-surface-dark/50 rounded-3xl p-8 border border-gray-200 dark:border-gray-800">
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                    <div class="text-center">
+                        <div class="text-yellow-500 mb-2 flex justify-center">
+                            <span class="material-symbols-outlined text-3xl">trophy</span>
+                        </div>
+                        <div class="text-3xl font-bold mb-1">50+</div>
+                        <div class="text-xs text-gray-500 uppercase tracking-wide">Projects Completed</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-blue-500 mb-2 flex justify-center">
+                            <span class="material-symbols-outlined text-3xl">groups</span>
+                        </div>
+                        <div class="text-3xl font-bold mb-1">30+</div>
+                        <div class="text-xs text-gray-500 uppercase tracking-wide">Happy Clients</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-purple-500 mb-2 flex justify-center">
+                            <span class="material-symbols-outlined text-3xl">bolt</span>
+                        </div>
+                        <div class="text-3xl font-bold mb-1">7+</div>
+                        <div class="text-xs text-gray-500 uppercase tracking-wide">Years Experience</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-green-500 mb-2 flex justify-center">
+                            <span class="material-symbols-outlined text-3xl">verified</span>
+                        </div>
+                        <div class="text-3xl font-bold mb-1">100%</div>
+                        <div class="text-xs text-gray-500 uppercase tracking-wide">Client Satisfaction</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="py-20 bg-background-light dark:bg-background-dark" id="projects">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl lg:text-4xl font-bold mb-4">Featured Work</h2>
+                <div class="w-20 h-1 bg-primary mx-auto rounded-full mb-6"></div>
+                <p class="text-gray-600 dark:text-gray-400 max-w-xl mx-auto">
+                    Here are some of my recent projects that showcase my skills and passion for creating exceptional
+                    digital experiences.
+                </p>
+            </div>
+            <div class="bg-surface-dark rounded-3xl overflow-hidden border border-gray-800 shadow-2xl relative group">
+                <div class="flex flex-col lg:flex-row h-full">
+                    <div class="lg:w-1/2 overflow-hidden h-64 lg:h-auto">
+                        <img alt="AIC Amal Donation Platform"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuA9IbDMdw0uE-fFl_VNfzAvVE6m4tHI2iNa_JpXifJHxAX0UKFjSo2y7Xfq2GnwyOK1_Mcw0tdqcvCdZuRthlmey3Olcn5pRJI5NUMNhv26UqEXATbFAmD3EKi-DRRqgC6tlKSnsqox__DVBACFG7mRmTOyYS7iNH3ZvwsgHLRhBjrCFbX2KEDpnHX5a_BLOZriOjW3Fybpo0b3MYDZ0WesfmcK--czSPUN2vBWB0NBmn0SHrxoZSMfgP8UU-AcyXklvdk-KcXdzm_P" />
+                    </div>
+                    <div class="lg:w-1/2 p-10 flex flex-col justify-center bg-[#151b2b]">
+                        <h3 class="text-2xl font-bold mb-2 text-white">AIC Amal - Donation Platform</h3>
+                        <div class="flex gap-2 mb-6">
+                            <span
+                                class="text-xs px-2 py-1 bg-purple-500/20 text-purple-300 rounded border border-purple-500/30">Web
+                                App</span>
+                            <span
+                                class="text-xs px-2 py-1 bg-blue-500/20 text-blue-300 rounded border border-blue-500/30">Android</span>
+                            <span
+                                class="text-xs px-2 py-1 bg-green-500/20 text-green-300 rounded border border-green-500/30">iOS</span>
+                        </div>
+                        <p class="text-gray-400 mb-8 leading-relaxed text-sm">
+                            A comprehensive donation platform for different kinds of financial support and fundraising.
+                            Cross-platform solution with web app, Android &amp; iOS mobile apps for collecting general
+                            donations, subscriptions, sponsorships, campaigns, and Zakat.
+                        </p>
+                        <a class="inline-flex items-center gap-2 text-primary font-semibold hover:text-white transition-colors"
+                            href="#">
+                            View Case Study <span class="material-symbols-outlined">arrow_forward</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="bg-white dark:bg-[#0b1121] py-8 border-t border-gray-200 dark:border-gray-800">
+        <div class="container mx-auto px-6 text-center text-sm text-gray-500 dark:text-gray-400">
+            <p>© 2023 MD Mujahidul Islam. All rights reserved.</p>
+        </div>
+    </footer>
+    <script>
+        // Simple dark mode toggle logic for demonstration if needed, though system preference is usually default with 'class' strategy
+        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark')
+        } else {
+            document.documentElement.classList.remove('dark')
+        }
+    </script>
+</body>
+
+</html>
