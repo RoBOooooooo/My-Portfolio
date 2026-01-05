@@ -21,7 +21,13 @@ export default function Projects() {
             tagColors: ["purple", "blue", "green"],
             liveUrl: "https://rewise-arif.vercel.app/",
             githubUrl: "https://github.com/RoBOooooooo/rewise-client/",
-            technologies: ["React", "Node.js", "MongoDB", "Tailwind CSS"],
+            technologies: [
+                "React",
+                "Express",
+                "Node.js",
+                "MongoDB",
+                "Tailwind CSS",
+            ],
         },
         {
             id: 2,
@@ -33,7 +39,13 @@ export default function Projects() {
             tagColors: ["cyan", "gray", "blue"],
             liveUrl: "https://hiko-app.vercel.app/",
             githubUrl: "https://github.com/RoBOooooooo/hiko-app-client",
-            technologies: ["React", "Next.js", "Tailwind CSS", "MongoDB"],
+            technologies: [
+                "React",
+                "Tailwind CSS",
+                "Express",
+                "Nodejs",
+                "MongoDB",
+            ],
         },
         {
             id: 3,
@@ -45,7 +57,7 @@ export default function Projects() {
             tagColors: ["green", "purple"],
             liveUrl: "https://toy-topia-store.netlify.app/",
             githubUrl: "https://github.com/RoBOooooooo/Toy-Topia-Store",
-            technologies: ["MongoDB", "Express", "React", "Node.js"],
+            technologies: ["React", "Daisy UI", "Tailwind CSS"],
         },
     ];
 
