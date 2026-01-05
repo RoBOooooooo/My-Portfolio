@@ -1,73 +1,85 @@
-import { motion } from 'framer-motion'
-import { useInView } from 'framer-motion'
-import { useRef } from 'react'
+import { motion } from "framer-motion";
+import { useInView } from "framer-motion";
+import { useRef } from "react";
+import HTML5 from "./icons/HTML5";
+import CSS3 from "./icons/CSS3";
+import JavaScript from "./icons/JavaScript";
+import ReactIcon from "./icons/React";
+import Nodejs from "./icons/Nodejs";
+import NextjsIcon from "./icons/Nextjs";
+import ExpressjsIcon from "./icons/ExpressjsIcon";
+import MongoDBIcon from "./icons/MongoDBIcon";
+import FirebaseIcon from "./icons/FirebaseIcon";
+import OpenAiIcon from "./icons/OpenAiIcon";
+import FigmaIcon from "./icons/FigmaIcon";
+import GitIcon from "./icons/GitIcon";
 
 export default function Skills() {
-    const ref = useRef(null)
-    const isInView = useInView(ref, { once: true, threshold: 0.1 })
+    const ref = useRef(null);
+    const isInView = useInView(ref, { once: true, threshold: 0.1 });
 
     const skills = [
         {
-            name: 'HTML5',
-            icon: '🟠', // HTML5 orange
-            color: 'from-orange-500 to-orange-600'
+            name: "HTML5",
+            icon: <HTML5 />,
+            color: "from-orange-500 to-orange-600",
         },
         {
-            name: 'CSS3',
-            icon: '🔵', // CSS3 blue
-            color: 'from-blue-500 to-blue-600'
+            name: "CSS3",
+            icon: <CSS3 />,
+            color: "from-blue-500 to-blue-600",
         },
         {
-            name: 'JavaScript',
-            icon: '🟡', // JavaScript yellow
-            color: 'from-yellow-500 to-yellow-600'
+            name: "JavaScript",
+            icon: <JavaScript />,
+            color: "from-yellow-500 to-yellow-600",
         },
         {
-            name: 'React',
-            icon: '⚛️', // React atom
-            color: 'from-cyan-500 to-blue-500'
+            name: "React",
+            icon: <ReactIcon />,
+            color: "from-cyan-500 to-blue-500",
         },
         {
-            name: 'Node.js',
-            icon: '🟢', // Node.js green
-            color: 'from-green-500 to-green-600'
+            name: "Node.js",
+            icon: <Nodejs />,
+            color: "from-green-500 to-green-600",
         },
         {
-            name: 'Next.js',
-            icon: '⚫', // Next.js black/white
-            color: 'from-gray-800 to-black'
+            name: "Next.js",
+            icon: <NextjsIcon />,
+            color: "from-gray-800 to-black",
         },
         {
-            name: 'Express.js',
-            icon: '⚡', // Express lightning
-            color: 'from-gray-600 to-gray-700'
+            name: "Express.js",
+            icon: <ExpressjsIcon />,
+            color: "from-gray-600 to-gray-700",
         },
         {
-            name: 'MongoDB',
-            icon: '🍃', // MongoDB leaf
-            color: 'from-green-600 to-green-700'
+            name: "MongoDB",
+            icon: <MongoDBIcon />,
+            color: "from-green-600 to-green-700",
         },
         {
-            name: 'Firebase',
-            icon: '🔥', // Firebase flame
-            color: 'from-orange-500 to-red-500'
+            name: "Firebase",
+            icon: <FirebaseIcon />,
+            color: "from-orange-500 to-red-500",
         },
         {
-            name: 'Git',
-            icon: '🔀', // Git branching
-            color: 'from-red-500 to-red-600'
+            name: "Git",
+            icon: <GitIcon />,
+            color: "from-red-500 to-red-600",
         },
         {
-            name: 'Figma',
-            icon: '🗄️', // Database
-            color: 'from-blue-600 to-indigo-600'
+            name: "Figma",
+            icon: <FigmaIcon />,
+            color: "from-blue-600 to-indigo-600",
         },
         {
-            name: 'AI',
-            icon: '🐍', // Python snake
-            color: 'from-blue-500 to-yellow-500'
-        }
-    ]
+            name: "AI",
+            icon: <OpenAiIcon />,
+            color: "from-blue-500 to-yellow-500",
+        },
+    ];
 
     const containerVariants = {
         hidden: { opacity: 0 },
@@ -75,16 +87,16 @@ export default function Skills() {
             opacity: 1,
             transition: {
                 staggerChildren: 0.1,
-                delayChildren: 0.2
-            }
-        }
-    }
+                delayChildren: 0.2,
+            },
+        },
+    };
 
     const skillVariants = {
-        hidden: { 
-            opacity: 0, 
+        hidden: {
+            opacity: 0,
             y: 50,
-            scale: 0.8
+            scale: 0.8,
         },
         visible: {
             opacity: 1,
@@ -94,10 +106,10 @@ export default function Skills() {
                 type: "spring",
                 stiffness: 100,
                 damping: 12,
-                duration: 0.6
-            }
-        }
-    }
+                duration: 0.6,
+            },
+        },
+    };
 
     const titleVariants = {
         hidden: { opacity: 0, y: -30 },
@@ -108,14 +120,14 @@ export default function Skills() {
                 type: "spring",
                 stiffness: 100,
                 damping: 15,
-                duration: 0.8
-            }
-        }
-    }
+                duration: 0.8,
+            },
+        },
+    };
 
     return (
-        <section 
-            id="skills" 
+        <section
+            id="skills"
             ref={ref}
             className="py-20 bg-gradient-to-br from-background-light via-gray-50 to-background-light dark:from-background-dark dark:via-gray-900 dark:to-background-dark relative overflow-hidden"
         >
@@ -133,7 +145,7 @@ export default function Skills() {
                     variants={titleVariants}
                     className="text-center mb-16"
                 >
-                    <motion.div 
+                    <motion.div
                         className="inline-block mb-6"
                         whileHover={{ scale: 1.05 }}
                         transition={{ type: "spring", stiffness: 300 }}
@@ -142,23 +154,33 @@ export default function Skills() {
                             My Skills
                         </span>
                     </motion.div>
-                    
-                    <motion.h2 
+
+                    <motion.h2
                         className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4"
                         initial={{ opacity: 0, y: 20 }}
-                        animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+                        animate={
+                            isInView
+                                ? { opacity: 1, y: 0 }
+                                : { opacity: 0, y: 20 }
+                        }
                         transition={{ delay: 0.3, duration: 0.6 }}
                     >
                         Technologies I Work With
                     </motion.h2>
-                    
-                    <motion.p 
+
+                    <motion.p
                         className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto"
                         initial={{ opacity: 0, y: 20 }}
-                        animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+                        animate={
+                            isInView
+                                ? { opacity: 1, y: 0 }
+                                : { opacity: 0, y: 20 }
+                        }
                         transition={{ delay: 0.4, duration: 0.6 }}
                     >
-                        A comprehensive toolkit of modern technologies and frameworks that I use to build exceptional digital experiences.
+                        A comprehensive toolkit of modern technologies and
+                        frameworks that I use to build exceptional digital
+                        experiences.
                     </motion.p>
                 </motion.div>
 
@@ -173,10 +195,14 @@ export default function Skills() {
                         <motion.div
                             key={skill.name}
                             variants={skillVariants}
-                            whileHover={{ 
-                                scale: 1.1, 
+                            whileHover={{
+                                scale: 1.1,
                                 y: -10,
-                                transition: { type: "spring", stiffness: 300, damping: 20 }
+                                transition: {
+                                    type: "spring",
+                                    stiffness: 300,
+                                    damping: 20,
+                                },
                             }}
                             whileTap={{ scale: 0.95 }}
                             className="group relative"
@@ -184,10 +210,10 @@ export default function Skills() {
                             <div className="bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-200 dark:border-gray-700 hover:border-primary/30 dark:hover:border-primary/30">
                                 {/* Skill Icon */}
                                 <div className="flex justify-center mb-4">
-                                    <div className={`w-16 h-16 rounded-xl bg-gradient-to-br ${skill.color} flex items-center justify-center text-2xl shadow-lg group-hover:shadow-xl transition-all duration-300`}>
-                                        <span className="text-white font-bold">
-                                            {skill.icon}
-                                        </span>
+                                    <div
+                                        className={`w-16 h-16 rounded-xl bg-gradient-to-br flex items-center justify-center text-2xl shadow-lg group-hover:shadow-xl transition-all duration-300`}
+                                    >
+                                        {skill.icon}
                                     </div>
                                 </div>
 
@@ -204,10 +230,10 @@ export default function Skills() {
                             <motion.div
                                 className="absolute inset-0 rounded-2xl bg-gradient-to-br from-primary/10 to-secondary/10 -z-10"
                                 initial={{ opacity: 0, scale: 0.8 }}
-                                whileHover={{ 
-                                    opacity: 1, 
+                                whileHover={{
+                                    opacity: 1,
                                     scale: 1.05,
-                                    transition: { duration: 0.3 }
+                                    transition: { duration: 0.3 },
                                 }}
                             />
                         </motion.div>
@@ -217,12 +243,15 @@ export default function Skills() {
                 {/* Bottom CTA */}
                 <motion.div
                     initial={{ opacity: 0, y: 30 }}
-                    animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+                    animate={
+                        isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }
+                    }
                     transition={{ delay: 0.8, duration: 0.6 }}
                     className="text-center mt-16"
                 >
                     <p className="text-gray-600 dark:text-gray-300 mb-6">
-                        Always learning and exploring new technologies to stay ahead of the curve.
+                        Always learning and exploring new technologies to stay
+                        ahead of the curve.
                     </p>
                     <motion.a
                         href="#projects"
@@ -241,5 +270,5 @@ export default function Skills() {
                 </motion.div>
             </div>
         </section>
-    )
+    );
 }

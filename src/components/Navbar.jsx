@@ -187,7 +187,8 @@ export default function Navbar({ darkMode, toggleDarkMode }) {
                 <div className="flex items-center gap-4">
                     <motion.a
                         className="hidden sm:flex items-center gap-2 bg-secondary/10 text-secondary border border-secondary/20 px-4 py-2 rounded-full text-sm font-semibold hover:bg-secondary hover:text-white transition-all cursor-pointer"
-                        href="#"
+                        href="https://wa.me/+8801721602071"
+                        target='_blank'
                         whileHover={{ scale: 1.05, y: -2 }}
                         whileTap={{ scale: 0.95 }}
                         initial={{ opacity: 0, scale: 0.8 }}
